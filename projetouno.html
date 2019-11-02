@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Mostra Tecnológica</title>
+<link rel="stylesheet" type="text/css" href="estilo2.css">
+</head>
+<body>
+<img src="logoarduino.png" width="30%">
+<nav>
+  <ul class="menu">
+        <li><a href="index.html">MENU</a></li>
+		 <li><a href="arduino.html">ARDUINO</a></li>
+		 <li><a href="#"> TIPOS DE ARDUINO</a>
+                <ul>
+                      <li><a href="uno.html">UNO</a></li>
+                      <li><a href="nano.html">NANO</a></li> 
+                      <li><a href="lilypad.html">LILYPAD</a></li>   
+					  <li><a href="mega.html">MEGA</a></li> 
+                </ul>
+            </li>           
+            <li><a href="###">PROJETOS COM ARDUINO</a>
+                <ul>
+                      <li><a href="projetouno.html">UNO</a></li>
+                      <li><a href="projetonano.html">NANO</a></li> 
+                      <li><a href="projetolilypad.html">LILYPAD</a></li>   
+					  <li><a href="projetomega.html">MEGA</a></li> 
+                </ul>
+            </li>                
+</ul>
+</nav>
+<br><br><br><br>
+<center><h2>PROJETO COM ARDUINO UNO<h2>
+<br><br>
+<h2>Botão que acende leds com efeito</h2>
+<br><br>
+<h2>Componentes necessário:</h2>
+<br>
+<h3><li>1x Arduino UNO;
+<li>1x Protoboard;
+<li>4x leds de cores diferentes
+<li>4x resistores de 100ohms;
+<li>1x botão do tipo push button;
+<li>7x jumpers grandes;
+<li>5x jumpers pequenos;
+<li>1x cabo USB;
+<li>um alicate de bico(caso necessário):
+</h3>
+<br><br>
+<h3>A primeira coisa que vamos fazer é colocar os leds e o botão na protoboard. Neste caso as pernas grandes dos leds foram conectadas nas colunas 40, 45, 50, 55. As pernas pequenas dos leds foram conectadas nas colunas 41, 46, 51, 56. O botão teve suas perninhas conectadas as colunas 33 e 35.</h3>
+<br><br>
+<h3>Agora chegou a vez dos resistores. Conecte os quatros resistores de 100 ohms nas colunas que estão conectadas as pernas grandes dos leds (colunas 40, 45, 50 e 55) conforme mostra a imagem abaixo. Os resistores dos leds devem ter apenas uma de suas pernas conectadas a protoboard, pois a outra perna do resistor será ligada aos fios jumper que serão conectados ao Arduino. Conecte o resistor de 150 ohms na coluna 33 e na linha horizontal negativa da protoboard (linha azul neste caso) como na imagem abaixo</h3>
+<br><br>
+<img src="fotouno.png" width="30%">
+<br><br>
+<h3>Conecte os fios jumper pequenos na linha horizontal negativa da protoboard e nas colunas das pernas pequenas dos leds, no caso as colunas 41, 46, 51, 56. Conecte a coluna 35, que esta a perninha do botão um fio jumper ligado a linha horizontal positiva da protoboard.</h3>
+<br><br>
+<h3> conecte os fios jumper maiores na protoboard. Para cada perna grande de um led você vai ligar um fio jumper, neste caso o fio azul esta ligado no resistor da coluna 55, o fio vermelho no resistor da coluna 50, o fio verde no resistor da coluna 45 e o fio amarelo no resistor da coluna 40. Na coluna 33 entre o botão e o resistor você vai ligar outro fio jumper, neste caso é o fio jumper roxo. Para finalizar conecte um fio jumper na linha horizontal negativa azul, neste caso foi o fio preto, e outro fio na linha horizontal positiva vermelha.</h3>
+<br><br>
+<img src="fotouno2.png" width="30%">
+<br><br>
+<h3>O próximo passo é conectar os fios jumper grandes no arduino.</h3>
+<br><br>
+<h3>ATENÇÃO:Os fios jumpers grandes serão conectados da seguinte forma:
+<br>
+<li>fio azul no pino digital 11;
+<li>fio vermelho no pino digital 10;
+<li>fio verde no pino digital 9;
+<li>fio amarelo no pino digital 8;
+<li>fio roxo no pino digital 2;
+<li>fio preto no pino GND;
+<li>fio cinza no pino 5V.
+</h3>
+<br><br>
+<h3>Os pinos digitais 8, 9, 10, e 11 do arduino serão responsáveis por enviar a energia para acender os leds conectados na protoboard. O pino digital 2 será um pino de entrada, que receberá ou não energia, conforme o presionamento do botão, possibilitando a leitura do estado do botão (pressionado ou não pressionado). O pino GND é o terra do arduino, onde estão conectadas todas as perninhas menores dos leds. E o pino 5V é o responsável por mandar energia para o botão possibilitando o controle do seu estado, juntamente com o pino digital 2 do arduino.</h3>
+<br><br>
+<h2>Hora de Programar!!!</h2>
+<br><br>
+<img src="codigouno.png" width="40%">
+<br>
+<br>
+</center>
+</body>
+</html>
